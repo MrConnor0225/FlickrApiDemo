@@ -28,17 +28,17 @@ class FeedViewController: UIViewController {
         colloectionView.delegate = self
         colloectionView.dataSource = self
         fetchImage(urlStr: urlStr)
-        refreshCollectionView()
+        //refreshCollectionView()
     }
     
     
-    func refreshCollectionView() {
-        print("####")
-        let refreshController = UIRefreshControl()
-        refreshController.attributedTitle = NSAttributedString(string: "下滑更新")
-        refreshController.addTarget(self, action: #selector(fetchImage(urlStr:)), for: .valueChanged)
-        self.colloectionView.refreshControl = refreshController
-    }
+//    func refreshCollectionView() {
+//        print("####")
+//        let refreshController = UIRefreshControl()
+//        refreshController.attributedTitle = NSAttributedString(string: "下滑更新")
+//        refreshController.addTarget(self, action: #selector(fetchImage(urlStr:)), for: .valueChanged)
+//        self.colloectionView.refreshControl = refreshController
+//    }
 
 
     @objc func fetchImage(urlStr: String) {
